@@ -7,8 +7,8 @@ from yelp.oauth1_authenticator import Oauth1Authenticator
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
-address = "380 St Kilda Road, Melbourne 3000"
-term = "computer store"
+#address = "380 St Kilda Road, Melbourne 3000"
+#term = "computer store"
 
 from yelp.client import Client
 from yelp.oauth1_authenticator import Oauth1Authenticator
