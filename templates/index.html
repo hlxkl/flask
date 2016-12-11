@@ -6,7 +6,7 @@
 		<div class="jumbotron">
 			<div class="container">
 				{% if businesses %}
-					<h3>Businesses near {{ address }}</h3>
+					<h3>{{ term }} businesses near {{ address }}</h3>
 						{% for d in businesses %}
 				 			{% print("-- {} -- Phone: {}".format(d['name'], d['phone'])) %}<br>
 						{% endfor %}

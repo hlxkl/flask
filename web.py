@@ -16,7 +16,7 @@ def index():
     get_business = None
     if address:
         get_business = yelp_api.get_businesses(address,search_term)
-    return render_template('index.html', businesses=get_business, address=address)
+    return render_template('index.html', businesses=get_business, address=address, term=search_term)
     #print (get_business)
 @app.route('/about')
 def about():
