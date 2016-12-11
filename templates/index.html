@@ -5,14 +5,20 @@
 	<body>
 		<div class="jumbotron">
 			<div class="container">
-				{% if forecast %}
-					<h1>{{ forecast }}</h1>
-					<a href="{{ url_for('index') }}">Look up another address</a>
+				{% if businesses %}
+					<h3>Businesses near {{ address }}</h3>
+						{% for d in businesses %}
+				 			{% print("-- {} -- Phone: {}".format(d['name'], d['phone'])) %}<br>
+						{% endfor %}
+					<a href="{{ url_for('index') }}">Look up another address | </a>
 				{% else %}
-					<h1>Hello! Where do you live?</h1>
+					<h1>Find businesses near: </h1>
 					<form action="/" class="form-inline">
 						<div class="form-group">
 							<input type="text" name="address" placeholder="City, State" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="text" name="search_term" placeholder="Business Type" class="form-control">
 						</div>
 						<input type="submit" value="Submit" class="btn btn-primary">
 					</form>
